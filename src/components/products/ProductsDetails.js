@@ -16,6 +16,7 @@ const ProductsDetails = () => {
 
     useEffect(() => {
         console.log('re render', params.id)
+        // eslint-disable-next-line
         item = 0;
         productos.forEach(producto => {
             if (producto.id === parseInt(params.id)) {
@@ -30,6 +31,7 @@ const ProductsDetails = () => {
     useEffect(() => {
         const values = `${detalle.img1}${url}${detalle.img2}`;
         setImages(values)
+        // eslint-disable-next-line
     }, [url, params.id])
 
     const handleInput = (e) => {
@@ -81,6 +83,7 @@ const ProductsDetails = () => {
             <h2 className="relacionados">Productos relacionados</h2>
             <div className="productos">
                 {
+                    // eslint-disable-next-line
                     productos.map((producto) => {
                         if ((item < 6) && (detalle.category === producto.category)) {
                             item++;

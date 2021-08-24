@@ -13,6 +13,7 @@ const Cart = () => {
     const show2 = menu ? "carrito show" : "carrito";
 
     const resta = (id) => {
+        // eslint-disable-next-line
         addCart.map(item => {
             if (item.id === id) {
                 item.cantidad === 1 ? item.cantidad = 1 : item.cantidad -= 1;
@@ -22,6 +23,7 @@ const Cart = () => {
     }
 
     const suma = (id) => {
+        // eslint-disable-next-line
         addCart.map(item => {
             if (item.id === id) {
                 item.cantidad += 1
@@ -36,6 +38,7 @@ const Cart = () => {
 
     const removeProduct = (id) => {
         if (window.confirm("¿Quieres suspender el producto?")) {
+            // eslint-disable-next-line
             addCart.map((item, index) => {
                 if (item.id === id) {
                     item.cantidad = 1;
